@@ -23,17 +23,6 @@ import json
 import os
 import sys
 
-# Work out the path to the DesignFormat area
-script_dir = os.path.dirname(os.path.realpath(__file__))
-df_py_dir  = os.path.abspath(os.path.join(script_dir, '../python'))
-
-# Allow override if DF is on the path
-if 'DESIGN_FORMAT_DIR' in os.environ:
-    df_py_dir = os.path.join(os.environ['DESIGN_FORMAT_DIR'], 'python')
-
-# Add DesignFormat to the path
-sys.path.append(df_py_dir)
-
 # Import DesignFormat
 from designformat import DFProject, DFBlock, DFPort, DFInterconnect, DFConstants
 from designformat import DFRegisterGroup
