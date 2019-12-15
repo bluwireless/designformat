@@ -16,9 +16,12 @@
 # BLADE.  If not, see <https://www.gnu.org/licenses/>.
 #
 
+import os
+
 from setuptools import setup
 
-with open("../README.md", "r") as fh:
+this_dir = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_dir, "..", "README.md"), "r") as fh:
     long_description = fh.read()
 
 setup(
