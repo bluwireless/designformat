@@ -20,9 +20,12 @@ import os
 
 from setuptools import setup
 
-this_dir = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(this_dir, "..", "README.md"), "r") as fh:
-    long_description = fh.read()
+top_dir          = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+readme_path      = os.path.join(top_dir, "README.md")
+long_description = ""
+if os.path.exists(readme_path):
+    with open(readme_path, "r") as fh:
+        long_description = fh.read()
 
 setup(
     name="designformat",
