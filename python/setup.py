@@ -48,6 +48,7 @@ setup(
     project_urls={
         'Source': 'https://github.com/bluwireless/designformat',
         'Tracker': 'https://github.com/bluwireless/designformat/issues',
+        'Documentation': 'https://designformat.readthedocs.io/en/latest',
     },
     packages=['designformat'],
     package_dir={ '': pkg_path },

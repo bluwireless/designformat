@@ -2,6 +2,20 @@
 
 ---
 
+<p align="center">
+    A Cross-Language Interchange Format for Hardware Description Based on JSON
+    <br>
+    <a href="https://designformat.readthedocs.io/en/latest">Documentation</a>
+    &bull;
+    <a href="https://pypi.org/project/designformat/">PyPI Package</a>
+</p>
+
+---
+
+<p align="center">
+    <img src="https://readthedocs.org/projects/designformat/badge/?version=latest" />
+</p>
+
 # DesignFormat
 DesignFormat is a file format for storing fully expanded, hiearchical design data. It is uses JSON as a storage format as many languages offer native and relatively performant JSON parsers - making it easy to share data between different environments. DesignFormat is intended to be used as the interchange format between different tools, eliminating the need for multiple tools to parse the source data - which can introduce inconsistencies and errors.
 
