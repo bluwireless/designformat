@@ -16,18 +16,28 @@
 # BLADE.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-from distutils.core import setup
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
-    name          ="DesignFormat",
-    version       ="1.3",
-    license       =['GNU General Public License v3.0'],
-    description   =
+    name="designformat",
+    version="1.3",
+    license='GNU General Public License v3.0',
+    description=
         "A Cross-Language Interchange Format for Hardware Description Based on "
         "JSON"
     ,
-    author        ='Blu Wireless Ltd',
-    packages      =['designformat'],
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    author='Blu Wireless Ltd',
+    url='https://www.bluwireless.com',
+    project_urls={
+        'Source': 'https://github.com/bluwireless/designformat',
+        'Tracker': 'https://github.com/bluwireless/designformat/issues',
+    },
+    packages=['designformat'],
     extras_require={
         "documentation": [
             'sphinx',
