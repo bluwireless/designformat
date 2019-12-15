@@ -20,7 +20,13 @@ import os
 
 from setuptools import setup
 
-top_dir          = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+this_dir = os.path.abspath(os.path.dirname(__file__))
+top_dir  = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
+# Calculate relative package path
+pkg_path = os.path.relpath(this_dir, os.getcwd())
+
+# Calculate path to README.md
 readme_path      = os.path.join(top_dir, "README.md")
 long_description = ""
 if os.path.exists(readme_path):
@@ -44,6 +50,7 @@ setup(
         'Tracker': 'https://github.com/bluwireless/designformat/issues',
     },
     packages=['designformat'],
+    package_dir={ '': pkg_path },
     extras_require={
         "documentation": [
             'sphinx',
